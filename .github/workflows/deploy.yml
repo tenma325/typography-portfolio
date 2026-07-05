@@ -23,7 +23,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      # npm install (not ci): the lockfile is generated on Windows and lacks
+      # cross-platform optional-dep entries (@emnapi/*), which breaks npm ci on Linux
+      - run: npm install --no-audit --no-fund
       - run: npm run build
       - uses: actions/configure-pages@v5
         with:
