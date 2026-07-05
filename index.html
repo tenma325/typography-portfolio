@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zen & Chaos // Typography Portfolio</title>
+    <!-- Google Fonts: Syne (bold headlines) and Space Grotesk (technical monospace feel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@700;800&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Constellation backdrop (ink dots & lines) for the sections below the hero -->
+    <canvas id="constellation"></canvas>
+    <!-- Chaos pane: black veil + Blender 3D backdrop + particle text,
+         clipped to the right of the cursor-driven 静/沌 boundary -->
+    <div id="chaos-veil"></div>
+    <canvas id="chaos3d"></canvas>
+    <canvas id="art-canvas"></canvas>
+    <div id="duality-divider"><span class="divider-label">静 / 沌</span></div>
+
+    <div class="app-container">
+      <!-- HEADER -->
+      <header class="grid-header">
+        <div class="logo">
+          <span class="logo-text">T.PORTFOLIO</span>
+        </div>
+        <div class="navigation">
+          <a href="#works" class="nav-link">WORKS</a>
+          <a href="#about" class="nav-link">ABOUT</a>
+          <a href="#contact" class="nav-link">CONTACT</a>
+        </div>
+        <div class="duality-meta">
+          <span class="duality-hint">静 ⇄ 沌 — MOVE YOUR CURSOR</span>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="grid-main">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+          <div class="hero-bg-text">01</div>
+          <h1 class="hero-title animate-text">
+            <span class="line">DESIGN IS</span>
+            <span class="line stroke-text">SYSTEM.</span>
+            <span class="line">ART IS</span>
+            <span class="line stroke-text">CHAOS.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Minimalism organizes the noise of the world, while Generative Art embraces its beautiful randomness. Move your cursor — the boundary between order and chaos follows.
+          </p>
+        </section>
+
+        <!-- CONCEPT SECTION: the site's thesis, set typographically.
+             「シンプル」 is set wide and calm, 「カオス」 breaks apart. -->
+        <section id="concept" class="concept-section">
+          <div class="section-label">CONCEPT</div>
+          <h2 class="concept-copy">
+            <span class="concept-intro">デザインとは、</span>
+            <span class="concept-main">
+              <span class="w-simple">シンプル</span><span class="concept-conj">で、</span><span class="w-chaos"><i>カ</i><i>オ</i><i>ス</i></span><span class="concept-conj">だ。</span>
+            </span>
+          </h2>
+          <div class="concept-detail">
+            <p>
+              デザインは、多種多様に異なる。ひとつの正解を持たない。
+              研ぎ澄ませば、余白だけが残る「静寂」になり、
+              解き放てば、点と線が入り乱れる「混沌」になる。
+            </p>
+            <p>
+              このサイトは、その両極をひとつの画面に閉じ込めるための実験装置である。
+            </p>
+          </div>
+          <span class="concept-vert" aria-hidden="true">多種多様に、異なる。</span>
+        </section>
+
+        <!-- WORKS SECTION -->
+        <section id="works" class="works-section">
+          <div class="section-label">SELECTED WORKS</div>
+          <div class="works-list">
+            <div class="work-item">
+              <span class="work-num">01/</span>
+              <h2 class="work-title" data-text="KINETIC_FORM">KINETIC FORM</h2>
+              <span class="work-category">INTERACTIVE DESIGN</span>
+              <span class="work-year">2026</span>
+            </div>
+            <div class="work-item">
+              <span class="work-num">02/</span>
+              <h2 class="work-title" data-text="SWISS_GRID">SWISS GRID</h2>
+              <span class="work-category">GRAPHIC POSTER</span>
+              <span class="work-year">2025</span>
+            </div>
+            <div class="work-item">
+              <span class="work-num">03/</span>
+              <h2 class="work-title" data-text="FLUID_INK">FLUID INK</h2>
+              <span class="work-category">GENERATIVE ART</span>
+              <span class="work-year">2025</span>
+            </div>
+            <div class="work-item">
+              <span class="work-num">04/</span>
+              <h2 class="work-title" data-text="ALGORITHMIC_SOUL">ALGORITHMIC SOUL</h2>
+              <span class="work-category">WEBGL EXPERIENCE</span>
+              <span class="work-year">2024</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section">
+          <div class="section-label">ABOUT ME</div>
+          <div class="about-content">
+            <h3 class="about-headline">CREATING TENSION BETWEEN ORDER AND DISORDER.</h3>
+            <div class="about-body">
+              <p>
+                こんにちは。私はデザインとコードの境界線上で活動するクリエイティブ・コーダーです。
+                グリッドシステムに基づくストイックなタイポグラフィと、数学的な秩序から生まれる混沌としたジェネラティブアート、その二面性を往復しながら新しいWebの表現を追求しています。
+              </p>
+              <p>
+                My work leverages standard CSS typography, browser APIs, and mathematical randomness. I believe the browser is not just a document viewer, but a living canvas for programmatic expression.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+          <div class="section-label">CONNECT</div>
+          <div class="contact-links">
+            <a href="mailto:hello@example.com" class="contact-link">HELLO@EXAMPLE.COM</a>
+            <a href="https://github.com" target="_blank" class="contact-link">GITHUB</a>
+            <a href="https://twitter.com" target="_blank" class="contact-link">TWITTER</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="grid-footer">
+        <div>© 2026 T.PORTFOLIO. ALL RIGHTS RESERVED.</div>
+        <div>DESIGNED BY ALGORITHM</div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
